@@ -34,3 +34,7 @@ step2: run Input_dll.exe
 ## Support
 
 Win7-Win10 x64
+
+// 通过注册进程创建/退出回调函数把进程加入要注入list。
+// 通过注册Image加载回调函数，在回调函数中创建系统线程，以线程函数中对进程进行DLL注入。
+// 具体注入是hook了ZwContinue函数
